@@ -8,6 +8,8 @@ for n in {1..5}; do
 
 for dir in {1..5}; do
     for n in {1..4}; do
-	echo $n > five/dir$dir/file$n
+	for x in $(seq 1 $n); do
+	    echo $n >> five/dir$dir/file$n
+	done
     done
 done
